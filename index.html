@@ -25,12 +25,17 @@
         .logo img {
             max-width: 90%; /* agar tetap responsif */
             max-height: 80vh; /* memenuhi layar laptop */
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1.2s ease forwards;
         }
-        .info {
-            margin-top: 20px;
-            max-width: 800px;
-            font-size: 1.2em;
-            line-height: 1.6;
+
+        /* Animasi logo */
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
@@ -38,7 +43,6 @@
 
     <div class="logo">
         <img src="Vertix.png" alt="Logo Vertix">
-        </div>
     </div>
 
 </body>
