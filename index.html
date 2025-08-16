@@ -9,69 +9,41 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #000;
+            background: #fff; /* background putih */
+            color: #000; /* teks hitam */
+            text-align: center;
+            cursor: pointer; /* biar kelihatan bisa di-klik */
         }
-        header {
-            background: #1a1a2e;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 20px;
-        }
-        header img {
-            height: 300px; /* diganti dari 50px ke 300px */
-            margin-right: 15px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        .hero {
-            width: 100%;
+        .logo {
+            width: 100vw;
             height: 100vh;
-            background-image: url('images/hero.jpg');
-            background-size: cover;
-            background-position: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            cursor: pointer;
-            padding: 20px;
         }
-        .hero h2 {
-            color: white;
-            font-size: 3em;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-            margin: 0;
+        .logo img {
+            max-width: 90%; /* agar tetap responsif */
+            max-height: 80vh; /* memenuhi layar laptop */
         }
-        .hero p {
-            color: white;
+        .info {
+            margin-top: 20px;
+            max-width: 800px;
             font-size: 1.2em;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-            margin-top: 15px;
-            max-width: 700px;
+            line-height: 1.6;
         }
     </style>
 </head>
-<body>
-    <!-- Header dengan logo -->
-    <header>
-        <img src="Vertix.png" alt="Logo Vertix">
-        <h1>VERTIX</h1>
-    </header>
+<body onclick="window.location.href='members.html'">
 
-    <!-- Hero -->
-    <div class="hero" onclick="location.href='members.html'">
-        <h2>VERTIX</h2>
-        <p>
-            Vertix adalah boy group beranggotakan 9 orang yang debut pada 18 Agustus 2018 di bawah SMASIX Entertainment. 
-            Mereka merilis album debut berjudul <em>Into The New World</em> yang menampilkan energi rap, vokal dan dance powerful. 
-            Dengan anggota multinasional dari Korea, Amerika, Kanada, Jepang, dan Tiongkok, Vertix membawa warna internasional ke dunia K-pop.
-        </p>
-        <p><strong>Vertix Member</strong></p>
+    <div class="logo">
+        <img src="Vertix.png" alt="Logo Vertix">
+        <div class="info">
+            <p><strong>Vertix</strong> adalah boy group beranggotakan 9 orang yang debut pada <strong>18 Agustus 2018</strong> di bawah <strong>SMASIX Entertainment</strong>.</p>
+            <p>Mereka merilis album debut berjudul <em>Into The New World</em> yang menampilkan energi rap, vokal emosional, dan dance powerful.</p>
+            <p>Dengan anggota multinasional dari Korea, Amerika, Kanada, Jepang, dan Tiongkok, Vertix membawa warna internasional ke dunia K-pop.</p>
+        </div>
     </div>
+
 </body>
 </html>
