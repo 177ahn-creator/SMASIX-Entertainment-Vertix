@@ -16,11 +16,53 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            position: relative;
         }
         h1 {
             margin: 0;
             font-size: 2em;
         }
+        /* Hamburger Icon */
+        .menu-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            font-size: 28px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #1a1a2e;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 20;
+        }
+        .sidebar a {
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.2s;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -92,8 +134,15 @@
 </head>
 <body>
     <header>
-        <h1>Biodata Lengkap Anggota VERTIX</h1>
+        <h1>VERTIX Members</h1>
+        <span class="menu-icon" onclick="openSidebar()">&#9776;</span>
     </header>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <span class="closebtn" onclick="closeSidebar()">&times;</span>
+        <a href="#" onclick="showDiscography()">Discography</a>
+    </div>
 
     <div class="container">
         <!-- Contoh card anggota -->
@@ -104,14 +153,14 @@
             </div>
         </div>
 
-        <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','Korea')">
+     <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','Korea')">
             <img src="Maul.jpg" alt="Maul">
             <div class="card-content">
                 <h2>Maul</h2>
             </div>
         </div>
 
-        <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Kanada')">
+     <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Kanada')">
             <img src="Rivaldo.jpg" alt="Rivaldo">
             <div class="card-content">
                 <h2>Rivaldo</h2>
@@ -160,8 +209,9 @@
             </div>
         </div>
     </div>
+    </div>
 
-    <!-- Modal -->
+    <!-- Modal Anggota -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -173,7 +223,25 @@
         </div>
     </div>
 
+    <!-- Modal Discography -->
+    <div id="discographyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDiscography()">&times;</span>
+            <h2>Discography</h2>
+            <p id="discographyText">Tulis penjelasan discography di sini...</p>
+        </div>
+    </div>
+
     <script>
+        // Sidebar
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        // Modal Anggota
         function showModal(name, korean, position, birth, country) {
             document.getElementById('modalName').innerText = name;
             document.getElementById('modalKorean').innerText = korean;
@@ -182,14 +250,25 @@
             document.getElementById('modalCountry').innerText = country;
             document.getElementById('modal').style.display = 'block';
         }
-
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
+        }
+
+        // Modal Discography
+        function showDiscography() {
+            document.getElementById('discographyModal').style.display = 'block';
+            closeSidebar();
+        }
+        function closeDiscography() {
+            document.getElementById('discographyModal').style.display = 'none';
         }
 
         window.onclick = function(event) {
             if (event.target == document.getElementById('modal')) {
                 closeModal();
+            }
+            if (event.target == document.getElementById('discographyModal')) {
+                closeDiscography();
             }
         }
     </script>
