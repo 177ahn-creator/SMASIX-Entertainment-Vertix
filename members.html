@@ -114,7 +114,7 @@
             margin: 8% auto;
             padding: 20px;
             width: 80%;
-            max-width: 600px;
+            max-width: 700px;
             border-radius: 10px;
             position: relative;
         }
@@ -130,6 +130,44 @@
         .close:hover {
             color: #000;
         }
+
+        /* Timeline Discography */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .timeline-item:hover {
+            transform: scale(1.02);
+        }
+        .album-cover {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .timeline-content h3 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #1a1a2e;
+        }
+        .timeline-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -142,73 +180,65 @@
     <div id="mySidebar" class="sidebar">
         <span class="closebtn" onclick="closeSidebar()">&times;</span>
         <a href="#" onclick="showDiscography()">Discography</a>
-        <a href="#" onclick="showAlbum()">Album</a> <!-- 🔥 Tambahan menu Album -->
+        <a href="#" onclick="showAlbum()">Album</a>
     </div>
 
     <div class="container">
-        <!-- Card anggota tetap sama (aku biarin tidak diubah) -->
+        <!-- Card anggota -->
         <div class="card" onclick="showModal('Rendra','백현준 (Baek Hyeonjun)','Main Rapper','2001 January 30','America')">
             <img src="dra2.png" alt="Rendra">
             <div class="card-content">
                 <h2>Rendra</h2>
             </div>
         </div>
-        <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','South Korea','https://instagram.com/vertix_maul')">
+        <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','South Korea')">
             <img src="ull.png" alt="Maul">
             <div class="card-content">
                 <h2>Maul</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Canada','https://instagram.com/vertix_rivaldo')">
+        <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Canada')">
             <img src="rivv.png" alt="Rivaldo">
             <div class="card-content">
                 <h2>Rivaldo</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Joko','나카무라 하루토 (Nakamura Haruto)','Lead Dancer','2002 September 5','Japan','https://instagram.com/vertix_joko')">
+        <div class="card" onclick="showModal('Joko','나카무라 하루토 (Nakamura Haruto)','Lead Dancer','2002 September 5','Japan')">
             <img src="ko.png" alt="Joko">
             <div class="card-content">
                 <h2>Joko</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Izza','리톈하오 (Li Tianhao)','Main Dancer','2002 October 6','China','https://instagram.com/vertix_izza')">
+        <div class="card" onclick="showModal('Izza','리톈하오 (Li Tianhao)','Main Dancer','2002 October 6','China')">
             <img src="za4.png" alt="Izza">
             <div class="card-content">
                 <h2>Izza</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Alfan','박준호 (Park Junho)','Sub Rapper','2002 December 24','South Korea','https://instagram.com/vertix_alfan')">
+        <div class="card" onclick="showModal('Alfan','박준호 (Park Junho)','Sub Rapper','2002 December 24','South Korea')">
             <img src="fann.png" alt="Alfan">
             <div class="card-content">
                 <h2>Alfan</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Aldo','김태성 (Kim Taeseong)','Center, Main Vocal','2003 January 11','South Korea','https://instagram.com/vertix_aldo')">
+        <div class="card" onclick="showModal('Aldo','김태성 (Kim Taeseong)','Center, Main Vocal','2003 January 11','South Korea')">
             <img src="do4.png" alt="Aldo">
             <div class="card-content">
                 <h2>Aldo</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Iuz','최도현 (Choi Dohyun)','Visual, Sub Dancer','2003 March 21','South Korea','https://instagram.com/vertix_iuz')">
+        <div class="card" onclick="showModal('Iuz','최도현 (Choi Dohyun)','Visual, Sub Dancer','2003 March 21','South Korea')">
             <img src="uz.png" alt="Iuz">
             <div class="card-content">
                 <h2>Iuz</h2>
             </div>
         </div>
-
-        <div class="card" onclick="showModal('Aldi','이찬율 (Lee Chanyul)','Maknae, Sub Vocal','2003 August 9','South Korea','https://instagram.com/vertix_aldi')">
+        <div class="card" onclick="showModal('Aldi','이찬율 (Lee Chanyul)','Maknae, Sub Vocal','2003 August 9','South Korea')">
             <img src="dii.png" alt="Aldi">
             <div class="card-content">
                 <h2>Aldi</h2>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- Modal Anggota -->
@@ -223,34 +253,53 @@
         </div>
     </div>
 
-    <!-- Modal Discography -->
+    <!-- Modal Discography dengan Timeline -->
     <div id="discographyModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeDiscography()">&times;</span>
             <h2>Discography</h2>
-            <p id="discographyText">VERTIX (Hangul: 버틱스; stylized as VERTIX) adalah boy group asal Korea Selatan yang dibentuk oleh SMASIX Entertainment. Grup ini resmi debut pada 18 Agustus 2018 dengan sembilan anggota. VERTIX dikenal dengan kemampuan rap yang kuat, vokal stabil, koreografi bertenaga, serta citra grup yang solid tanpa kontroversi sepanjang karier mereka. Sejak debut, VERTIX dipandang sebagai salah satu grup paling konsisten dalam hal musik, performa, dan kedekatan antaranggota. Grup ini juga memiliki fanbase global yang terus berkembang, menjadikan mereka salah satu representasi boy group generasi keempat yang solid. 2018: Debut dengan Infinity
 
-VERTIX debut pada 18 Agustus 2018 dengan album mini Infinity yang menampilkan lagu utama dengan koreografi intens dan rap yang menonjol. Penampilan debut mereka menarik perhatian publik karena kualitas rap dan vokal live yang stabil, menjadikan mereka rookie yang diperhitungkan.
-
-2019–2020: Penguatan Popularitas
-
-Pada 2019, VERTIX merilis album Style dengan konsep ceria yang menunjukkan sisi berbeda dari mereka. Grup ini mulai aktif tampil di acara musik, variety show, dan memenangkan penghargaan rookie. Di akhir tahun, VERTIX mengadakan tur mini Asia, memperluas basis penggemar internasional.
-
-2021–2023: Puncak Popularitas
-
-Memasuki 2021, VERTIX merilis beberapa album sukses secara digital dan fisik. Konsep mereka yang konsisten antara powerful performance dan solid teamwork membuat nama mereka makin besar. Grup ini juga dikenal tanpa kontroversi, yang menambah citra positif di mata publik.
-
-2025–2028: Perjalanan Kontrak
-
-Pada 2025, kontrak salah satu anggota, Rendra, berakhir, namun ia tetap melanjutkan aktivitas bersama grup di luar agensi. Tahun berikutnya (2026), Joko, Izza, dan Aldo juga memutuskan untuk tidak memperpanjang kontrak dengan SMASIX Entertainment, tetapi tetap menjadi bagian dari VERTIX. Empat anggota lainnya (Rivaldo, Alfan, Iuz, Aldi) bertahan di agensi hingga 2028. Meskipun tersebar di agensi berbeda, mereka tetap menjaga kebersamaan dan aktif sebagai grup penuh.
-
-2028: 10th Anniversary OT8
-
-Pada tahun 2028, VERTIX merayakan 10 tahun debut mereka dengan formasi OT8 setelah Maul keluar permanen dari grup. Perayaan ini menjadi momen emosional bagi penggemar karena menunjukkan betapa kuatnya ikatan antaranggota meski menghadapi banyak perubahan.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <img src="infinity.jpg" alt="Infinity Album" class="album-cover">
+                    <div class="timeline-content">
+                        <h3>2018 – Debut dengan <em>Infinity</em></h3>
+                        <p>VERTIX debut pada 18 Agustus 2018 dengan mini album <b>Infinity</b>. Lagu utama menampilkan koreografi intens dan rap menonjol.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <img src="style.jpg" alt="Style Album" class="album-cover">
+                    <div class="timeline-content">
+                        <h3>2019 – <em>Style</em></h3>
+                        <p>Album <b>Style</b> membawa konsep ceria. Grup mulai aktif di variety show, menang rookie award, dan menggelar mini Asia tour.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <img src="peak.jpg" alt="Peak Era" class="album-cover">
+                    <div class="timeline-content">
+                        <h3>2021–2023 – Puncak Popularitas</h3>
+                        <p>Beberapa album sukses dengan konsep powerful & teamwork solid membuat nama VERTIX makin besar di dunia K-Pop.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <img src="contract.jpg" alt="Contract Era" class="album-cover">
+                    <div class="timeline-content">
+                        <h3>2025–2028 – Perjalanan Kontrak</h3>
+                        <p>Beberapa member keluar dari agensi tapi tetap aktif di grup, bukti ikatan solid meski tersebar di label berbeda.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <img src="10th.jpg" alt="10th Anniversary" class="album-cover">
+                    <div class="timeline-content">
+                        <h3>2028 – 10th Anniversary OT8</h3>
+                        <p>Perayaan 10 tahun debut dengan formasi OT8 menjadi momen emosional bagi fans dan bukti persahabatan yang kuat.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- 🔥 Modal Album -->
+    <!-- Modal Album -->
     <div id="albumModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeAlbum()">&times;</span>
@@ -319,7 +368,7 @@ Pada tahun 2028, VERTIX merayakan 10 tahun debut mereka dengan formasi OT8 setel
             document.getElementById('discographyModal').style.display = 'none';
         }
 
-        // 🔥 Modal Album
+        // Modal Album
         function showAlbum() {
             document.getElementById('albumModal').style.display = 'block';
             closeSidebar();
@@ -337,3 +386,4 @@ Pada tahun 2028, VERTIX merayakan 10 tahun debut mereka dengan formasi OT8 setel
     </script>
 </body>
 </html>
+
