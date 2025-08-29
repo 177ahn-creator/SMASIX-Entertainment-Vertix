@@ -1,203 +1,219 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertix Members</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1a1a2e;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        /* Hamburger Icon */
-        .menu-icon {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            cursor: pointer;
-            font-size: 28px;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #1a1a2e;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
-            z-index: 20;
-        }
-        .sidebar a {
-            padding: 12px 24px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #fff;
-            display: block;
-            transition: 0.2s;
-        }
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-        .sidebar .closebtn {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            font-size: 32px;
-            cursor: pointer;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-            gap: 20px;
-        }
-        .card {
-            background-color: #fff;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.2s;
-            cursor: pointer;
-            text-align: center;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 10px;
-        }
-        .card-content h2 {
-            margin: 0;
-            color: #1a1a2e;
-            font-size: 1.2em;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.7);
-        }
-        .modal-content {
-            background-color: #fff;
-            margin: 8% auto;
-            padding: 20px;
-            width: 80%;
-            max-width: 700px;
-            border-radius: 10px;
-            position: relative;
-        }
-        .close {
-            color: #aaa;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover {
-            color: #000;
-        }
-
-        /* Timeline Discography */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 15px;
-        }
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .timeline-item:hover {
-            transform: scale(1.02);
-        }
-        .album-cover {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .timeline-content h3 {
-            margin: 0;
-            font-size: 1.1em;
-            color: #1a1a2e;
-        }
-        .timeline-content p {
-            margin: 5px 0 0;
-            font-size: 0.9em;
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertix Members</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    /* Hamburger Icon */
+    .menu-icon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      font-size: 28px;
+    }
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #1a1a2e;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 20;
+    }
+    .sidebar a {
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      display: block;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+    .sidebar .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 32px;
+      cursor: pointer;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      cursor: pointer;
+      text-align: center;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .card-content { padding: 10px; }
+    .card-content h2 {
+      margin: 0;
+      color: #1a1a2e;
+      font-size: 1.2em;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 8% auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+      position: relative;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover { color: #000; }
+    /* Timeline Discography */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .timeline-item:hover { transform: scale(1.02); }
+    .album-cover {
+      width: 100px; height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .timeline-content h3 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #1a1a2e;
+    }
+    .timeline-content p {
+      margin: 5px 0 0;
+      font-size: 0.9em;
+      color: #333;
+    }
+    /* Album Modal Styling */
+    .album-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .album-art {
+      width: 150px; height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .tracklist {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .track span {
+      font-size: 1em;
+      color: #1a1a2e;
+      font-weight: 500;
+    }
+    .track audio {
+      width: 160px;
+      height: 28px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>VERTIX Members</h1>
-        <span class="menu-icon" onclick="openSidebar()">&#9776;</span>
-    </header>
+  <header>
+    <h1>VERTIX Members</h1>
+    <span class="menu-icon" onclick="openSidebar()">&#9776;</span>
+  </header>
 
-    <!-- Sidebar -->
-    <div id="mySidebar" class="sidebar">
-        <span class="closebtn" onclick="closeSidebar()">&times;</span>
-        <a href="#" onclick="showDiscography()">Discography</a>
-        <a href="#" onclick="showAlbum()">Album</a>
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <span class="closebtn" onclick="closeSidebar()">&times;</span>
+    <a href="#" onclick="showDiscography()">Discography</a>
+    <a href="#" onclick="showAlbum()">Album</a>
+  </div>
+
+  <div class="container">
+    <!-- Card anggota (contoh sebagian) -->
+    <div class="card" onclick="showModal('Rendra','백현준 (Baek Hyeonjun)','Main Rapper','2001 January 30','America')">
+      <img src="dra2.png" alt="Rendra">
+      <div class="card-content"><h2>Rendra</h2></div>
     </div>
-
-    <div class="container">
-        <!-- Card anggota -->
-        <div class="card" onclick="showModal('Rendra','백현준 (Baek Hyeonjun)','Main Rapper','2001 January 30','America')">
-            <img src="dra2.png" alt="Rendra">
-            <div class="card-content">
-                <h2>Rendra</h2>
-            </div>
-        </div>
-        <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','South Korea')">
-            <img src="ull.png" alt="Maul">
-            <div class="card-content">
-                <h2>Maul</h2>
-            </div>
-        </div>
-        <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Canada')">
+    <div class="card" onclick="showModal('Maul','윤지호 (Yoon Jiho)','Face of the Group, Lead Rapper','2002 June 14','South Korea')">
+      <img src="ull.png" alt="Maul">
+      <div class="card-content"><h2>Maul</h2></div>
+    </div>
+    <div class="card" onclick="showModal('Rivaldo','정민규 (Jeong Mingyu)','Leader, Lead Vocal','2002 July 5','Canada')">
             <img src="rivv.png" alt="Rivaldo">
             <div class="card-content">
                 <h2>Rivaldo</h2>
@@ -239,151 +255,98 @@
                 <h2>Aldi</h2>
             </div>
         </div>
-    </div>
+  </div>
 
-    <!-- Modal Anggota -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalName"></h2>
-            <p><strong>Nama Korea:</strong> <span id="modalKorean"></span></p>
-            <p><strong>Posisi:</strong> <span id="modalPosition"></span></p>
-            <p><strong>Tanggal Lahir:</strong> <span id="modalBirth"></span></p>
-            <p><strong>Negara:</strong> <span id="modalCountry"></span></p>
+  <!-- Modal Anggota -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalName"></h2>
+      <p><strong>Nama Korea:</strong> <span id="modalKorean"></span></p>
+      <p><strong>Posisi:</strong> <span id="modalPosition"></span></p>
+      <p><strong>Tanggal Lahir:</strong> <span id="modalBirth"></span></p>
+      <p><strong>Negara:</strong> <span id="modalCountry"></span></p>
+    </div>
+  </div>
+
+  <!-- Modal Discography -->
+  <div id="discographyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeDiscography()">&times;</span>
+      <h2>Discography</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <img src="infinity.jpg" class="album-cover">
+          <div class="timeline-content">
+            <h3>2018 – Debut dengan <em>Infinity</em></h3>
+            <p>Debut pada 18 Agustus 2018 dengan mini album <b>Infinity</b>.</p>
+          </div>
         </div>
+        <!-- Timeline lainnya... -->
+      </div>
     </div>
+  </div>
 
-    <!-- Modal Discography dengan Timeline -->
-    <div id="discographyModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeDiscography()">&times;</span>
-            <h2>Discography</h2>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <img src="infinity.jpg" alt="Infinity Album" class="album-cover">
-                    <div class="timeline-content">
-                        <h3>2018 – Debut dengan <em>Infinity</em></h3>
-                        <p>VERTIX debut pada 18 Agustus 2018 dengan mini album <b>Infinity</b>. Lagu utama menampilkan koreografi intens dan rap menonjol.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <img src="style.jpg" alt="Style Album" class="album-cover">
-                    <div class="timeline-content">
-                        <h3>2019 – <em>Style</em></h3>
-                        <p>Album <b>Style</b> membawa konsep ceria. Grup mulai aktif di variety show, menang rookie award, dan menggelar mini Asia tour.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <img src="peak.jpg" alt="Peak Era" class="album-cover">
-                    <div class="timeline-content">
-                        <h3>2021–2023 – Puncak Popularitas</h3>
-                        <p>Beberapa album sukses dengan konsep powerful & teamwork solid membuat nama VERTIX makin besar di dunia K-Pop.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <img src="contract.jpg" alt="Contract Era" class="album-cover">
-                    <div class="timeline-content">
-                        <h3>2025–2028 – Perjalanan Kontrak</h3>
-                        <p>Beberapa member keluar dari agensi tapi tetap aktif di grup, bukti ikatan solid meski tersebar di label berbeda.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <img src="10th.jpg" alt="10th Anniversary" class="album-cover">
-                    <div class="timeline-content">
-                        <h3>2028 – 10th Anniversary OT8</h3>
-                        <p>Perayaan 10 tahun debut dengan formasi OT8 menjadi momen emosional bagi fans dan bukti persahabatan yang kuat.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Modal Album (Revisi Spotify-style) -->
+  <div id="albumModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAlbum()">&times;</span>
+      <div class="album-header">
+        <img src="infinity.jpg" alt="Infinity Album" class="album-art">
+        <div>
+          <h2>Infinity</h2>
+          <p>2018 • Mini Album</p>
         </div>
-    </div>
-
-    <!-- Modal Album -->
-    <div id="albumModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAlbum()">&times;</span>
-            <h2>Album - Infinity</h2>
-            <ul>
-                <li>
-                    <strong>My Style</strong><br>
-                    <audio controls>
-                        <source src="My Style.mp3" type="audio/mpeg">
-                        Browser tidak mendukung audio.
-                    </audio>
-                </li>
-                <li>
-                    <strong>New World</strong><br>
-                    <audio controls>
-                        <source src="New World.mp3" type="audio/mpeg">
-                        Browser tidak mendukung audio.
-                    </audio>
-                </li>
-                <li>
-                    <strong>The First Snow</strong><br>
-                    <audio controls>
-                        <source src="The First Snow.mp3" type="audio/mpeg">
-                        Browser tidak mendukung audio.
-                    </audio>
-                </li>
-                <li>
-                    <strong>If I'm S, Can You Be My N?</strong><br>
-                    <audio controls>
-                        <source src="If I'm S, Can You Be My N_.mp3" type="audio/mpeg">
-                        Browser tidak mendukung audio.
-                    </audio>
-                </li>
-            </ul>
+      </div>
+      <div class="tracklist">
+        <div class="track">
+          <span>1. My Style</span>
+          <audio controls><source src="My Style.mp3" type="audio/mpeg"></audio>
         </div>
+        <div class="track">
+          <span>2. New World</span>
+          <audio controls><source src="New World.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="track">
+          <span>3. The First Snow</span>
+          <audio controls><source src="The First Snow.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="track">
+          <span>4. If I'm S, Can You Be My N?</span>
+          <audio controls><source src="If I'm S, Can You Be My N_.mp3" type="audio/mpeg"></audio>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-        // Sidebar
-        function openSidebar() {
-            document.getElementById("mySidebar").style.width = "250px";
-        }
-        function closeSidebar() {
-            document.getElementById("mySidebar").style.width = "0";
-        }
-
-        // Modal Anggota
-        function showModal(name, korean, position, birth, country) {
-            document.getElementById('modalName').innerText = name;
-            document.getElementById('modalKorean').innerText = korean;
-            document.getElementById('modalPosition').innerText = position;
-            document.getElementById('modalBirth').innerText = birth;
-            document.getElementById('modalCountry').innerText = country;
-            document.getElementById('modal').style.display = 'block';
-        }
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-
-        // Modal Discography
-        function showDiscography() {
-            document.getElementById('discographyModal').style.display = 'block';
-            closeSidebar();
-        }
-        function closeDiscography() {
-            document.getElementById('discographyModal').style.display = 'none';
-        }
-
-        // Modal Album
-        function showAlbum() {
-            document.getElementById('albumModal').style.display = 'block';
-            closeSidebar();
-        }
-        function closeAlbum() {
-            document.getElementById('albumModal').style.display = 'none';
-        }
-
-        // Tutup modal jika klik luar
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('modal')) closeModal();
-            if (event.target == document.getElementById('discographyModal')) closeDiscography();
-            if (event.target == document.getElementById('albumModal')) closeAlbum();
-        }
-    </script>
+  <script>
+    // Sidebar
+    function openSidebar(){document.getElementById("mySidebar").style.width="250px";}
+    function closeSidebar(){document.getElementById("mySidebar").style.width="0";}
+    // Modal Anggota
+    function showModal(name,korean,position,birth,country){
+      document.getElementById('modalName').innerText=name;
+      document.getElementById('modalKorean').innerText=korean;
+      document.getElementById('modalPosition').innerText=position;
+      document.getElementById('modalBirth').innerText=birth;
+      document.getElementById('modalCountry').innerText=country;
+      document.getElementById('modal').style.display='block';
+    }
+    function closeModal(){document.getElementById('modal').style.display='none';}
+    // Modal Discography
+    function showDiscography(){document.getElementById('discographyModal').style.display='block';closeSidebar();}
+    function closeDiscography(){document.getElementById('discographyModal').style.display='none';}
+    // Modal Album
+    function showAlbum(){document.getElementById('albumModal').style.display='block';closeSidebar();}
+    function closeAlbum(){document.getElementById('albumModal').style.display='none';}
+    // Close modal klik luar
+    window.onclick=function(e){
+      if(e.target==document.getElementById('modal')) closeModal();
+      if(e.target==document.getElementById('discographyModal')) closeDiscography();
+      if(e.target==document.getElementById('albumModal')) closeAlbum();
+    }
+  </script>
 </body>
 </html>
+
 
